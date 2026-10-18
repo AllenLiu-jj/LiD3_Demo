@@ -1,5 +1,5 @@
 # LiD3_Demo
-# LiD3 Demo
+
 
 **LiD3 — Real2Sim Spatial Data Engine for Physical AI**
 
