@@ -114,7 +114,7 @@ LiD3_Demo/
 
 ### 4.1 Introduction
 
-Garden 3DGS 是 LiD3 的第一层视觉重建 Demo。
+Garden 3DGS 是 LiD3 的第一层视觉重建 Demo，作为demo样例。
 
 基于公开的 **Mip-NeRF 360 Garden Dataset**，使用 Gaussian Splatting 完成真实场景重建，并通过 Three.js + Spark 实现浏览器端交互展示。
 
@@ -179,12 +179,12 @@ python demos/l1_garden_3dgs/serve.py --no-browser
 
 ### Step 1: Create a Directory
 
-在 `demos/` 目录下新建对应模块。
+在对应层加入代码库和demo展示
 
 例如：
 
 ```text
-demos/l2_object_segmentation/
+l2_object_segmentation/
 ```
 
 ### Step 2: Add Source Code
@@ -205,7 +205,7 @@ demo_name/
 
 ### Step 3: Write a README
 
-每个 Demo 都应该有独立的 README，至少说明：
+每个 Demo 最好有独立的 README，至少说明：
 
 1. Demo 的目标与功能
 2. 使用的开源技术及参考链接
@@ -261,6 +261,8 @@ demo_name/
 
 - 真实采集数据
 - 公开数据集
-- 模型推断结果
+- 重建数据
+- 仿真数据
+- 模型推断
 - 人工标注
 - 模拟或可
