@@ -1,0 +1,21 @@
+{
+  "scene": "Mip-NeRF 360 Garden",
+  "state": "complete",
+  "step": 30000,
+  "target_steps": 30000,
+  "engine": "Brush 0.3.0 / 3D Gaussian Splatting",
+  "views": 185,
+  "train_views": 161,
+  "test_views": 24,
+  "splats": 1357652,
+  "demo_checkpoint": "garden.spz",
+  "checkpoint": "garden.spz",
+  "source": "viewer/source.json",
+  "metrics": [
+    {
+      "step": 30000,
+      "psnr": 27.221148,
+      "ssim": 0.8552858
+    }
+  ]
+}

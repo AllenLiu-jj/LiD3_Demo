@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Garden · 项目说明</title>
+<style>body{max-width:760px;margin:60px auto;padding:0 24px;font:17px/1.9 system-ui;color:#233022;background:#f6f7f1}a{color:#375c2d}h1{line-height:1.4}li{margin:8px 0}small{color:#5e685b}</style>
+<h1>从真实照片，走进一座花园。</h1>
+<p>这是一处真实的户外花园，中央是圆木桌和花盆，周围有草地、墙面和树木。演示使用 Mip-NeRF 360 的 Garden 公开数据，共 185 个拍摄视角。</p>
+<p>网页中的画面由三维 Gaussian 模型实时渲染，转动视角时能观察到桌面、花盆和植物之间的空间关系。模型在本项目中训练生成。</p>
+<ul><li>流程：公开 COLMAP 相机标定 → Brush 3D Gaussian 训练 → Spark 网页展示。</li>
+<li>随包记录（本次入库未重新训练或复算指标）：完成 30,000 步优化，模型约 136 万个 Gaussian；161 张照片用于图像训练，24 张留作检验。</li>
+<li>留出视角平均 PSNR 27.22 dB，SSIM 0.855。公开相机标定使用了完整数据。</li>
+<li>远处树冠和拍摄范围边缘仍有拉伸瑕疵；主要展示区域是桌面、花盆与周围地面。</li></ul>
+<p><a href="viewer/">打开三维演示</a> · <a href="环绕展示.mp4">播放环绕视频</a> · <a href="原片与重建对照.jpg">查看原片对照</a></p>
+<p><small>数据与论文：<a href="https://jonbarron.info/mipnerf360/">Mip-NeRF 360 — Barron et al., CVPR 2022</a>。下载来源记录见 viewer/source.json。网页使用 Three.js 与 Spark，需自行安装 Python 3.10+；第三方模块许可证保留在 licenses/。</small></p></html>
+

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Garden · 真实场景重建</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23182713'/%3E%3Cpath d='M16 4L28 16 16 28 4 16Z' fill='%23d8edb9'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three/package/build/three.module.js","three/addons/":"./vendor/three/package/examples/jsm/","@sparkjsdev/spark":"./vendor/spark/package/dist/spark.module.js"}}</script>
+</head>
+<body>
+  <div id="viewport"></div>
+  <header>
+    <div class="brand"><span class="mark">◈</span><span>REAL WORLD <b>/</b> 01</span></div>
+    <div class="badge" id="status">正在读取模型状态</div>
+  </header>
+  <section class="intro">
+    <div class="eyebrow">真实照片 → 三维场景</div>
+    <h1>走进这座花园。</h1>
+    <p>移动视角，看看桌面、花盆和树叶的细节。</p>
+  </section>
+  <div id="loading" class="loading"><strong id="loading-title">正在加载三维场景</strong><span id="loading-detail">首次打开需要读取模型，请稍候。</span><progress id="progress"></progress></div>
+  <div id="error" class="error" hidden></div>
+  <aside id="reference" hidden><button id="close-reference" aria-label="关闭">×</button><span>原始拍摄照片</span><img id="reference-image" alt="同一场景的原始拍摄照片"><p>这是照片参考，三维画面仍在后方实时渲染。</p></aside>
+  <footer>
+    <div class="controls">
+      <button id="tour" class="primary">开始环绕</button>
+      <button id="reset">回到起点</button>
+      <button id="photo">查看原片</button>
+      <button id="quality">画质：高清</button>
+      <button id="fullscreen">全屏</button>
+      <button id="refresh" hidden>加载新模型</button>
+    </div>
+    <div class="bottom"><span>拖动环绕 · 滚轮缩放 · 右键平移</span><span>Garden · 185 个拍摄视角 · <a href="../demo说明.html">项目说明</a></span></div>
+  </footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

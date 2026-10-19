@@ -1,0 +1,8 @@
+Garden · L1 静态 3DGS 演示
+需要先安装 Python 3.10+，并将 python 加入 PATH。
+Windows：双击“打开Demo.cmd”。macOS/Linux：运行 python3 serve.py。
+保留终端，打开输出的本机地址；不要直接双击 HTML。
+新版 Chrome / Edge，启用硬件加速与 WebGL 2；鼠标拖动环绕、滚轮缩放、右键平移。
+首次加载模型请等待，较慢时切换“流畅”。
+也可直接播放“环绕展示.mp4”或查看“原片与重建对照.jpg”。
+完整来源、限制和指标说明见 README.md。

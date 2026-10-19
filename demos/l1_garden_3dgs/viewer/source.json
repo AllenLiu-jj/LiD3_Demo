@@ -1,0 +1,9 @@
+{
+  "scene": "Mip-NeRF 360 Garden",
+  "description_zh": "真实户外花园：中央桌椅、草坪、花盆与周围树木，185 个环绕视角。",
+  "dataset_paper": "https://jonbarron.info/mipnerf360/",
+  "download_mirror": "https://huggingface.co/datasets/mileleap/mipnerf360",
+  "images": 185,
+  "calibration": "Published COLMAP calibration, rescaled to downloaded image dimensions",
+  "trained_model": "No pretrained model downloaded; Gaussian parameters are trained locally from these images."
+}
