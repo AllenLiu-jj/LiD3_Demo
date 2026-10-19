@@ -1,0 +1,78 @@
+{
+  "confidenceThreshold": 0.5,
+  "prompts": [
+    {
+      "name": "person",
+      "indices": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "watermelon",
+      "indices": [
+        3
+      ],
+      "fallbacks": [
+        "watermelon pillow",
+        "watermelon shaped cushion"
+      ]
+    },
+    {
+      "name": "stuffed panda",
+      "indices": [
+        4
+      ]
+    },
+    {
+      "name": "ground",
+      "indices": [
+        5
+      ]
+    },
+    {
+      "name": "wall",
+      "indices": [
+        6
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "person-a",
+      "name": "人物 A",
+      "category": "person",
+      "color": "#67d9ff"
+    },
+    {
+      "id": "person-b",
+      "name": "人物 B",
+      "category": "person",
+      "color": "#ffe280"
+    },
+    {
+      "id": "watermelon",
+      "name": "西瓜道具",
+      "category": "object",
+      "color": "#ff94ad"
+    },
+    {
+      "id": "panda",
+      "name": "熊猫玩偶",
+      "category": "object",
+      "color": "#c2adff"
+    },
+    {
+      "id": "ground",
+      "name": "地面",
+      "category": "environment",
+      "color": "#95e0a0"
+    },
+    {
+      "id": "wall",
+      "name": "墙面",
+      "category": "environment",
+      "color": "#b3bdca"
+    }
+  ]
+}

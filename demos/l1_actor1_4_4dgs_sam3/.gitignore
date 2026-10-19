@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+assets/
+vendor/
+outputs/
+*.pt
+*.pth
+*.ply
+*.mp4
+*.npz
+*.npy
+*.tar.gz
+.env
+.env.*
+*.log

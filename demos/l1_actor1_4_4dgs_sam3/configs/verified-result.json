@@ -1,0 +1,40 @@
+{
+  "relationCounts": {
+    "holding_candidate_2d": 360,
+    "lower_boundary_near_ground_2d": 400
+  },
+  "physicalContactEstablished": false,
+  "checkpointHash": "2408a8ae6ec006cd59f138c073281bdf33017529f1b955893d2038214bd6cd4d",
+  "source": "independent server export from this standalone module",
+  "playbackFps": 25,
+  "detectionFrames": {
+    "person-a": 200,
+    "person-b": 200,
+    "panda": 195,
+    "ground": 200,
+    "wall": 200,
+    "watermelon": 165
+  },
+  "videosMatchOriginalDelivery": true,
+  "note": "Detection coverage is not accuracy. Both MP4s were fully decoded on the GPU server.",
+  "videos": {
+    "actor1_4-wide-200.mp4": {
+      "frames": 200,
+      "sha256": "8cc4a35468f3830aafde9e604409b128e31c547d0877623f1bc7daaaae33cf08",
+      "bytes": 5018990
+    },
+    "actor1_4-wide-200-semantic.mp4": {
+      "frames": 200,
+      "sha256": "89093bfefe097df1a90e2e109f838ba2905d849c23fe6f0c617ced1924976893",
+      "bytes": 6230239
+    }
+  },
+  "durationSec": 8.0,
+  "resolution": [
+    1280,
+    720
+  ],
+  "outputFrames": 200,
+  "unitTestsPassed": 6,
+  "entityFill": false
+}

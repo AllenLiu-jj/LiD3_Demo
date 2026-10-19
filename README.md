@@ -68,6 +68,7 @@ Structured Physical AI Data
 | Demo | Layer | Description | Status |
 |---|---|---|---|
 | [Garden 3DGS](demos/l1_garden_3dgs/) | L1 | 真实场景的 Gaussian Splatting 重建与网页可视化 | Available |
+| [actor1_4 4D-GS + SAM3](demos/l1_actor1_4_4dgs_sam3/) | L1 / L2 / 二维关系 | 200 帧大幅移动视角视频、实体轮廓与二维关系候选 | Available |
 | Semantic Segmentation | L2 | 物体识别、语义分割与跨帧追踪 | Planned |
 | Spatial Fusion | L3 | 多视角数据对齐、3D 物体定位与空间融合 | Planned |
 | Action Reconstruction | L4 | 对象轨迹、交互事件及状态变化重建 | Planned |
