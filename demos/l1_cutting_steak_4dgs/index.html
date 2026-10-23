@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Cut Roasted Beef · 4D Gaussian Viewer</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23151921'/%3E%3Cpath d='M8 22L16 7L24 22Z' fill='%2368e1cd'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-icon">◈</span><div><strong>4D GAUSSIAN</strong><span>动态场景查看器</span></div></div>
+    <div class="scene-name"><span class="live-dot"></span> CUT ROASTED BEEF <span class="divider">/</span> <span>前 2 秒</span></div>
+    <button id="fullscreen" class="quiet">全屏 ↗</button>
+  </header>
+  <main>
+    <section class="stage" aria-label="交互式三维场景">
+      <div class="stage-top"><span id="view-label">原始视角 · cam00</span><span id="frame-info">t = 0.000 s</span></div>
+      <div id="viewport"><canvas id="canvas" tabindex="0" aria-label="拖动即可原地转动镜头；相机位置固定"></canvas></div>
+      <div id="loading" role="status"><div class="spinner"></div><strong id="loading-text">正在读取训练好的高斯模型</strong><span>准备连续时间渲染…</span></div>
+      <div id="error" role="alert" hidden></div>
+      <div class="stage-bottom"><span id="render-stat">249,780 Gaussians</span><span>拖动转向 · 相机位置固定</span><span id="fps">— FPS</span></div>
+      <button id="reset" class="reset">↺ 重置视角</button>
+      <div id="move-pad" aria-label="相机移动" hidden></div>
+    </section>
+    <aside>
+      <div class="eyebrow">TRAINED SCENE</div><h1>切烤肉<span>时变高斯重建</span></h1>
+      <p class="description">拖动时间轴查看动态，切换相机或原地转向。</p>
+      <div class="model-stats"><div><span>高斯数量</span><strong id="count">249,780</strong></div><div><span>训练步数</span><strong id="step">200,000</strong></div></div>
+      <label class="field" for="camera-select">相机视角</label>
+      <select id="camera-select" aria-label="切换已标定相机"></select>
+      <label class="field" for="fov">镜头视野 <output id="fov-value"></output></label>
+      <input id="fov" type="range" min="25" max="110" step="0.5" aria-label="相机视野角度">
+      <div class="field-row"><label for="quality">渲染画质</label><select id="quality"><option value="1">标准</option><option value="1.5">高清</option><option value="0.65">流畅</option></select></div>
+      <button id="demo" class="wide demo-toggle" aria-pressed="false">▶ 4D 演示 · 镜头微动</button>
+      <button id="screenshot" class="wide">保存当前画面 ↓</button>
+      <details><summary>操作说明</summary><p>拖动转向，相机位置固定，滚轮无效。空格播放/暂停，←/→ 逐帧。「4D 演示」自动播放并轻微转动镜头。</p></details>
+    </aside>
+    <section class="timeline" aria-label="时间控制">
+      <div class="playback"><button id="play" class="play" disabled aria-label="播放">▶</button><div class="time-display"><strong id="time-current">0.000</strong><span id="time-total">/ 1.967 s</span></div><button id="prev" aria-label="上一帧">‹</button><button id="next" aria-label="下一帧">›</button></div>
+      <div class="scrubber"><input id="timeline" type="range" min="0" max="1" step="0.0001" value="0" aria-label="拖动时间轴"><div class="ticks"><span>0.0 s</span><span>0.5 s</span><span>1.0 s</span><span>1.5 s</span><span id="time-last-tick">1.967 s</span></div></div>
+      <div class="play-options"><label title="循环播放"><input type="checkbox" id="loop" checked> 循环</label><select id="speed" aria-label="播放速度"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></div>
+    </section>
+  </main>
+  <footer><span>4D reconstruction / interactive inspection</span><span id="status">模型加载中</span></footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
